@@ -29,16 +29,16 @@ public class LoginAction extends ActionSupport {
 		
 		System.out.println(request.getCharacterEncoding());
 		
-		if("root".equals(user.getName()) && "root123".equals(user.getPassword()))
+		if("jack".equals(user.getName()) && "123".equals(user.getPassword()))
 		{
 			Map session=ActionContext.getContext().getSession();
 			session.put("user.name", user.getName());
 			
-			System.out.println("µÇÂ¼³É¹¦,ÓÃ»§Ãû="+user.getName());
+			System.out.println("ç™»å½•æˆåŠŸ,ç”¨æˆ·å="+user.getName());
 			return "success";
 		}
 		
-		System.out.println("µÇÂ¼Ê§°Ü£¬ÓÃ»§Ãû="+user.getName());
+		System.out.println("ç™»å½•å¤±è´¥ï¼Œç”¨æˆ·å="+user.getName());
 		return "fail";
 	}
 	
